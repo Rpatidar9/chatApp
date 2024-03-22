@@ -47,7 +47,6 @@ module.exports = {
         return res.status(201).json({ message: 'successfully get users', data: user })
     },
     GetHome: async function (req, res) {
-        // const verifyUser = CheckToken(Token)
         const user = await Users.find({ _id: req.token._id });
         return res.status(201).json({ message: 'successfully get users', data: user })
     }
